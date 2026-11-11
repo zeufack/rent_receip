@@ -1,0 +1,8 @@
+/target
+
+# Personal reference documents and generated receipts
+/quittance*.pdf
+/modele_*.doc
+
+# OS / editor noise
+.DS_Store

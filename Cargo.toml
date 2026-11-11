@@ -1,0 +1,32 @@
+[package]
+name = "rent_receip"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+description = "Generate rent receipts (quittances de loyer) as PDF from a template"
+license = "MIT"
+readme = "README.md"
+keywords = ["pdf", "rent", "receipt", "quittance", "typst"]
+categories = ["command-line-utilities"]
+exclude = ["/modele_*.doc", "/quittance*.pdf"]
+
+[[bin]]
+name = "rent-receip"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+clap = { version = "4", features = ["derive"] }
+directories = "6"
+serde = { version = "1", features = ["derive"] }
+toml = "0.9"
+typst = "0.15"
+typst-as-lib = { version = "0.17", features = ["typst-kit-fonts", "typst-kit-embed-fonts"] }
+typst-layout = "0.15"
+typst-pdf = "0.15"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
