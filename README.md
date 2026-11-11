@@ -62,11 +62,11 @@ A more complete example:
 ```bash
 rent-receip new \
   --period 2026-11 \
-  --lessee "Moussaoui Zohra" --civility "Madame" \
-  --lessee-address "63 Rue du Lieutenant Colonel Prudhon, 95100 Argenteuil" \
-  --rent 480 --charges 70 --energy 0 \
-  --period-start 05/11/2026 --period-end 04/12/2026 \
-  --date 08/11/2026 --payment-date 05/11/2026 \
+  --lessee "Amina Traoré" --civility "Madame" \
+  --lessee-address "12 rue des Lilas, 75011 Paris" \
+  --rent 620 --charges 80 --energy 0 \
+  --period-start 01/11/2026 --period-end 30/11/2026 \
+  --date 02/11/2026 --payment-date 02/11/2026 \
   --out quittance.pdf
 ```
 
